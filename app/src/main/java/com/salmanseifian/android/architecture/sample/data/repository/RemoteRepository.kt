@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 class RemoteRepository(private val apiService: ApiService) : Repository {
 
-    override fun searchRepositories(q: String, page: Int): Flow<PagingData<Item>> {
+    override fun searchRepositories(q: String): Flow<PagingData<Item>> {
         return Pager(
             config = PagingConfig(
                 enablePlaceholders = false,

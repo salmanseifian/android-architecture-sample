@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface Repository {
 
-    fun searchRepositories(q: String, page: Int): Flow<PagingData<Item>>
+    fun searchRepositories(q: String): Flow<PagingData<Item>>
 }
