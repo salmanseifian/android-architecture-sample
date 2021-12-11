@@ -1,7 +1,8 @@
-package com.salmanseifian.android.architecture.sample
+package com.salmanseifian.android.architecture.sample.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.salmanseifian.android.architecture.sample.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
