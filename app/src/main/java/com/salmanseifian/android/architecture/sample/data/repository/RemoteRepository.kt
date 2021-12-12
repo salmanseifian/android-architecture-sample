@@ -8,8 +8,9 @@ import com.salmanseifian.android.architecture.sample.data.remote.ApiService
 import com.salmanseifian.android.architecture.sample.data.remote.GithubRepositoryDataSource
 import com.salmanseifian.android.architecture.sample.utils.NETWORK_PAGE_SIZE
 import kotlinx.coroutines.flow.Flow
+import javax.inject.Inject
 
-class RemoteRepository(private val apiService: ApiService) : Repository {
+class RemoteRepository @Inject constructor(private val apiService: ApiService) : Repository {
 
     override fun searchRepositories(q: String): Flow<PagingData<Item>> {
         return Pager(

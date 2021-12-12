@@ -11,9 +11,10 @@ import com.salmanseifian.android.architecture.sample.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class RepositoriesViewModel(private val repository: Repository) : ViewModel() {
+class RepositoriesViewModel @Inject constructor(private val repository: Repository) : ViewModel() {
 
     private val _allRepositories = MutableLiveData<PagingData<Item>>()
     val allRepositories: LiveData<PagingData<Item>>

@@ -2,7 +2,6 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="repository"
             type="com.salmanseifian.android.architecture.sample.data.model.Item" />
@@ -29,7 +28,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{Integer.parseInt(repository.size)}"
             app:layout_constraintTop_toBottomOf="@id/txt_repo_owner_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

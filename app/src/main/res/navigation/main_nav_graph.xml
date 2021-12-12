@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/repositoriesFragment">
 
+
+    <fragment
+        android:id="@+id/repositoriesFragment"
+        android:name="com.salmanseifian.android.architecture.sample.ui.RepositoriesFragment"
+        android:label="RepositoriesFragment" />
 </navigation>
