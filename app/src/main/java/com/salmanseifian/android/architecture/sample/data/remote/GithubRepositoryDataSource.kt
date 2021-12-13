@@ -29,6 +29,8 @@ class GithubRepositoryDataSource(private val apiService: ApiService, private val
             LoadResult.Error(error)
         } catch (exception: HttpException) {
             LoadResult.Error(exception)
+        } catch (exception: Exception) {
+            LoadResult.Error(exception)
         }
     }
 }
