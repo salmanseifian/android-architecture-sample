@@ -9,6 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
+        android:padding="8dp"
         android:layout_height="wrap_content">
 
         <TextView
@@ -28,6 +29,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="@{`` + repository.size}"
             app:layout_constraintTop_toBottomOf="@id/txt_repo_owner_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
