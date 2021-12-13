@@ -56,4 +56,25 @@ class PagingSourceTest {
             )
         )
     }
+
+
+    @Test
+    fun `repositories paging source load - failure - received null`() = runBlockingTest {
+        given(apiService.searchRepositories(any(), any())).willReturn(null)
+
+        val expectedResult = PagingSource.LoadResult.Error<Int, Item>(NullPointerException())
+
+        assertEquals(
+            expectedResult.toString(),
+            githubRepositoryDataSource.load(
+                PagingSource.LoadParams.Refresh(
+                    key = 1,
+                    loadSize = 1,
+                    placeholdersEnabled = false
+                )
+            ).toString()
+        )
+
+
+    }
 }
