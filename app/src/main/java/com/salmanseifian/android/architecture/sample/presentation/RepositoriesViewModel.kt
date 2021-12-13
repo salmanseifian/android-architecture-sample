@@ -21,7 +21,7 @@ class RepositoriesViewModel @Inject constructor(private val repository: Reposito
         get() = _allRepositories
 
     init {
-        searchRepositories("tris")
+        searchRepositories("tetris")
     }
 
     private fun searchRepositories(q: String) {
